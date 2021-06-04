@@ -4,6 +4,13 @@
   font-weight: 400;
 }
 
+body {
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: 100;
