@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>聴覚曲線測定</title>
+</head>
+
+<body>
+    <header>
+        <h1>聴覚曲線測定</h1>
+    </header>
+    <main>
+        <section id="app">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <span class="dummy"></span>
+            <input type="range" id="16hz" min="0" max="10" value="4" step="0.01">
+            <input type="range" id="31_5hz" min="0" max="10" value="4" step="0.01">
+            <input type="range" id="63hz" min="0" max="10" value="4" step="0.01">
+            <input type="range" id="125hz" min="0" max="10" value="4" step="0.01">
+            <input type="range" id="250hz" min="0" max="10" value="4" step="0.01">
+            <input type="range" id="500hz" min="0" max="10" value="4" step="0.01">
+            <input type="range" id="1000hz" min="0" max="10" value="4" step="0.01">
+            <input type="range" id="2000hz" min="0" max="10" value="4" step="0.01">
+            <input type="range" id="4000hz" min="0" max="10" value="4" step="0.01">
+            <input type="range" id="8000hz" min="0" max="10" value="4" step="0.01">
+            <input type="range" id="16000hz" min="0" max="10" value="4" step="0.01">
+            <span class="dummy"></span>
+            <p>15.625</p>
+            <p>31.25</p>
+            <p>62.5</p>
+            <p>125</p>
+            <p>250</p>
+            <p>500</p>
+            <p>1000</p>
+            <p>2000</p>
+            <p>4000</p>
+            <p>8000</p>
+            <p>16000</p>
+            <p>(Hz)</p>
+        </section>
+        <section>
+            <h2>参考</h2>
+            <ul>
+                <li>
+                    <a href="https://newt.phys.unsw.edu.au/jw/hearing.html" target="_blank">Hearing test on-line:
+                        sensitivity, equal loudness contours and audiometry</a><br>
+                    音声音響学基礎でやったやつ
+                </li>
+                <li>
+                    <a href="https://www.aist.go.jp/aist_j/press_release/pr2003/pr20031022/pr20031022.html"
+                        target="_blank">聴覚の等感曲線の国際規格ISO226が全面的に改正に | 産総研</a><br>
+                    周波数の範囲・刻みの参考にした
+                </li>
+                <li>
+                    <a href="https://www.ubsecure.jp/blog/20201027" target="_blank">Web Audio
+                        APIでシンセサイザーを作って遊ぶ（前編）</a><br>
+                    とっつきやすい
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API" target="_blank">Web Audio API
+                        | MDN</a>
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API"
+                                target="_blank">Web Audio API の使用</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/ja/docs/Web/API/OscillatorNode"
+                                target="_blank">OscillatorNode</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/API/GainNode"
+                                target="_blank">GainNode</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/ja/docs/Web/API/AudioScheduledSourceNode"
+                                target="_blank">AudioScheduledSourceNode</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/ja/docs/Web/API/AudioNode"
+                                target="_blank">AudioNode</a>
+                        </li>
+                    </ul>
+                    当然全面的に参考にした
+                </li>
+                <!-- <li>
+                    a[href="" target="_blank"]
+                </li> -->
+                <li>
+                    <a href="http://curtaincall.weblike.jp/portfolio-web-sounder/webaudioapi-basic/oscillator"
+                        target="_blank">Web Audio API 解説</a><br>
+                    OscillatorNode、複数回startしようとすると鳴らない問題<br>
+                    使い捨てにする(毎回startするときにOscillatorNodeを生成する)ことで解決
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <small>
+
+        </small>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
